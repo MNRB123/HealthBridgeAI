@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Wellness safety reminder",
+      "trigger": "PreToolUse",
+      "description": "Reminds the agent of the crisis-safety rules before any file edit.",
+      "matcher": "fs_write|str_replace|fs_append",
+      "action": {
+        "type": "agent",
+        "prompt": "If this edit touches MentalWellness.tsx, ai_service.py, or wellness.py: keep the 988 banner visible, keep crisis messages bypassing the AI, never end crisis regexes with a word boundary, and add or update a matching test in src/test/pages.test.tsx. Otherwise ignore this reminder."
+      }
+    }
+  ]
+}

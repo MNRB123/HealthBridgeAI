@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Verify build when agent stops",
+      "trigger": "Stop",
+      "description": "Runs the real type check and production build (tsc -b + vite) when the agent finishes a turn.",
+      "action": {
+        "type": "command",
+        "command": "npm run build",
+        "timeout": 120
+      }
+    }
+  ]
+}

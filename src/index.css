@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+
+  * {
+    @apply box-border;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Sidebar glass utilities */
+  .bg-white\/8 {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+  .hover\:bg-white\/8:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+  .border-white\/8 {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  /* Card hover scale */
+  .hover\:scale-\[1\.01\]:hover {
+    transform: scale(1.01);
+  }
+
+  /* Ring utilities for sidebar logo */
+  .ring-primary-500\/40 {
+    --tw-ring-color: rgba(59, 130, 246, 0.4);
+  }
+}
+
+/* ── Display settings (toggled from Settings page via <html> classes) ───────── */
+html.hb-font-small { font-size: 14px; }
+html.hb-font-large { font-size: 18px; }
+
+html.hb-contrast body { filter: contrast(1.2); }
+html.hb-contrast .text-gray-400,
+html.hb-contrast .text-gray-500 { color: #374151 !important; }
+
+html.hb-reduce-motion *,
+html.hb-reduce-motion *::before,
+html.hb-reduce-motion *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+html.hb-compact main { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+html.hb-compact .space-y-6 > * + *,
+html.hb-compact .space-y-5 > * + *,
+html.hb-compact .space-y-4 > * + * { margin-top: 0.625rem !important; }

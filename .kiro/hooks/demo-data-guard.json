@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Demo data guard",
+      "trigger": "PostFileSave",
+      "description": "After saving a source file, fail if real pharmacy or discount-card names appear in sample data.",
+      "matcher": "\\.(tsx?|py)$",
+      "action": {
+        "type": "command",
+        "command": "node scripts/check-demo-data.mjs",
+        "timeout": 30
+      }
+    }
+  ]
+}
