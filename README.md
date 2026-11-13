@@ -4,6 +4,11 @@ A demo healthcare accessibility app for people in the United States: find afford
 
 > Demo only. All providers, pharmacies, prices, and appointments are fictional. Not for medical use.
 
+**Live demo:** https://health-bridge-ai-wine.vercel.app/
+**Source:** https://github.com/MNRB123/HealthBridgeAI
+
+**For judges:** no login is needed. Open the link and use the sidebar, or go to the Login page and choose **Continue as demo user**. The FastAPI backend is not deployed (see Known limitations), so real sign up is unavailable. The demo user covers every page.
+
 ## Built with Kiro
 
 This project was built in Kiro, following a staged plan: requirements, an approved implementation plan, then incremental build phases, each checked with a type-check and production build.
